@@ -16,6 +16,9 @@
 		F2B7A1F82576638000224F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B7A1F62576638000224F8C /* LaunchScreen.storyboard */; };
 		F2B7A2032576638000224F8C /* TestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A2022576638000224F8C /* TestProjectTests.swift */; };
 		F2B7A20E2576638000224F8C /* TestProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A20D2576638000224F8C /* TestProjectUITests.swift */; };
+		F2B7A21C2576E8AB00224F8C /* JYDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */; };
+		F2B7A21E2576E8C000224F8C /* JYHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */; };
+		F2D06515257735DD009AF680 /* JYTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D06514257735DD009AF680 /* JYTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		F2B7A2092576638000224F8C /* TestProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B7A20D2576638000224F8C /* TestProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectUITests.swift; sourceTree = "<group>"; };
 		F2B7A20F2576638000224F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYDetailViewController.swift; sourceTree = "<group>"; };
+		F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYHistoryViewController.swift; sourceTree = "<group>"; };
+		F2D06514257735DD009AF680 /* JYTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYTableViewCell.swift; sourceTree = "<group>"; };
+		F2D0651925778D0C009AF680 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +125,7 @@
 				F2B7A1EB2576637F00224F8C /* AppDelegate.swift */,
 				F2B7A1ED2576637F00224F8C /* SceneDelegate.swift */,
 				F2B7A1EF2576637F00224F8C /* ViewController.swift */,
+				F2D0652B25779594009AF680 /* MyCode */,
 				F2B7A1F12576637F00224F8C /* Main.storyboard */,
 				F2B7A1F42576638000224F8C /* Assets.xcassets */,
 				F2B7A1F62576638000224F8C /* LaunchScreen.storyboard */,
@@ -144,9 +152,20 @@
 			path = TestProjectUITests;
 			sourceTree = "<group>";
 		};
+		F2D0652B25779594009AF680 /* MyCode */ = {
+			isa = PBXGroup;
+			children = (
+				F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */,
+				F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */,
+				F2D06514257735DD009AF680 /* JYTableViewCell.swift */,
+			);
+			path = MyCode;
+			sourceTree = "<group>";
+		};
 		F4E49B0D327ECF8622C8E351 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2D0651925778D0C009AF680 /* CoreData.framework */,
 				B35E3E018F52887D4185C942 /* Pods_TestProject.framework */,
 			);
 			name = Frameworks;
@@ -328,9 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B7A21C2576E8AB00224F8C /* JYDetailViewController.swift in Sources */,
+				F2B7A21E2576E8C000224F8C /* JYHistoryViewController.swift in Sources */,
 				F2B7A1F02576637F00224F8C /* ViewController.swift in Sources */,
 				F2B7A1EC2576637F00224F8C /* AppDelegate.swift in Sources */,
 				F2B7A1EE2576637F00224F8C /* SceneDelegate.swift in Sources */,
+				F2D06515257735DD009AF680 /* JYTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,6 +535,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seagull.123.TestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -523,6 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,6 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seagull.123.TestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

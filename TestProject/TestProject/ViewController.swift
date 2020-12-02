@@ -13,10 +13,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let button = UIButton()
+        button.backgroundColor = UIColor.red
+        button.setTitle("历史记录", for: .normal)
+        button.addTarget(self, action: #selector(historyButtonTouched), for: .touchUpInside)
+            
         
     }
-
+    
+    @objc func historyButtonTouched() {
+        
+    }
 
 }
 
