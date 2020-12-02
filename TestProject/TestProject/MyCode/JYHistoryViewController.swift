@@ -23,7 +23,7 @@ class JYHistoryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.green
+        self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "HistoryList"
         
         self.view.addSubview(self.tableView)
@@ -31,7 +31,7 @@ class JYHistoryViewController: UIViewController, UITableViewDelegate, UITableVie
             make?.left.equalTo()(0)
             make?.right.equalTo()(0)
             make?.bottom.equalTo()(self.view.mas_bottom)?.offset()(0)
-            make?.top.equalTo()(self.view.mas_top)?.offset()(0)
+            make?.top.equalTo()(self.view.mas_top)?.offset()(isIphoneX ? 88 : 64)
         }
         
         if self.historyArray.count > 0 {
@@ -59,5 +59,13 @@ class JYHistoryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if historyArray.count > indexPath.row {
+            let detailViewController = JKDetailViewController()
+            detailViewController.content = historyArray[indexPath.row].content
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }

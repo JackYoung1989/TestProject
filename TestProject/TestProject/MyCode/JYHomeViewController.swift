@@ -13,7 +13,7 @@ import MJExtension
 
 let isIphoneX = (UIScreen.main.bounds.size.width >= 375.0 && UIScreen.main.bounds.size.height >= 812.0)
 
-class JYDetailViewController: UIViewController {
+class JYHomeViewController: UIViewController {
     
     let kJYDetailViewControllerCellKey = "kJYDetailViewControllerCellKey"
     
@@ -31,7 +31,7 @@ class JYDetailViewController: UIViewController {
     
     lazy var contentTextView : UITextView  = {
         let textView = UITextView()
-        textView.backgroundColor = UIColor.yellow
+        textView.backgroundColor = UIColor.white
         textView.font = UIFont.systemFont(ofSize: 12)
         return textView
     }()
@@ -134,12 +134,6 @@ class JYDetailViewController: UIViewController {
         var fetchedObjects = [JKModel]()
         do {
             fetchedObjects = try context.fetch(fetchRequest)
-            
-            //print the result
-            for model in fetchedObjects{
-                print("🌟🌟🌟model=\(model.time ?? "")")
-                print("🌟🌟🌟content=\(model.content ?? "")")
-            }
         }
         catch {
             fatalError("failed：\(error)")

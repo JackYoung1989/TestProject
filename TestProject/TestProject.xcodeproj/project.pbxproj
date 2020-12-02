@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EBE8ED0C737BE5E46D913CA9 /* Pods_TestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35E3E018F52887D4185C942 /* Pods_TestProject.framework */; };
+		F2860A8B2577AC9200FC6668 /* JKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2860A8A2577AC9200FC6668 /* JKDetailViewController.swift */; };
 		F2B7A1EC2576637F00224F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A1EB2576637F00224F8C /* AppDelegate.swift */; };
 		F2B7A1EE2576637F00224F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A1ED2576637F00224F8C /* SceneDelegate.swift */; };
 		F2B7A1F02576637F00224F8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A1EF2576637F00224F8C /* ViewController.swift */; };
@@ -16,7 +17,7 @@
 		F2B7A1F82576638000224F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B7A1F62576638000224F8C /* LaunchScreen.storyboard */; };
 		F2B7A2032576638000224F8C /* TestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A2022576638000224F8C /* TestProjectTests.swift */; };
 		F2B7A20E2576638000224F8C /* TestProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A20D2576638000224F8C /* TestProjectUITests.swift */; };
-		F2B7A21C2576E8AB00224F8C /* JYDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */; };
+		F2B7A21C2576E8AB00224F8C /* JYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A21B2576E8AB00224F8C /* JYHomeViewController.swift */; };
 		F2B7A21E2576E8C000224F8C /* JYHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */; };
 		F2D06515257735DD009AF680 /* JYTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D06514257735DD009AF680 /* JYTableViewCell.swift */; };
 		F2D0652C2577971A009AF680 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D0651925778D0C009AF680 /* CoreData.framework */; };
@@ -44,6 +45,7 @@
 		426C3CC31EEDF31A7CB16FFA /* Pods-TestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject/Pods-TestProject.release.xcconfig"; sourceTree = "<group>"; };
 		9DB81D372A9364C068F1FAA0 /* Pods-TestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject/Pods-TestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B35E3E018F52887D4185C942 /* Pods_TestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2860A8A2577AC9200FC6668 /* JKDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKDetailViewController.swift; sourceTree = "<group>"; };
 		F2B7A1E82576637F00224F8C /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B7A1EB2576637F00224F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B7A1ED2576637F00224F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		F2B7A2092576638000224F8C /* TestProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B7A20D2576638000224F8C /* TestProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectUITests.swift; sourceTree = "<group>"; };
 		F2B7A20F2576638000224F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYDetailViewController.swift; sourceTree = "<group>"; };
+		F2B7A21B2576E8AB00224F8C /* JYHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYHomeViewController.swift; sourceTree = "<group>"; };
 		F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYHistoryViewController.swift; sourceTree = "<group>"; };
 		F2D06514257735DD009AF680 /* JYTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYTableViewCell.swift; sourceTree = "<group>"; };
 		F2D0651925778D0C009AF680 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -159,8 +161,9 @@
 		F2D0652B25779594009AF680 /* MyCode */ = {
 			isa = PBXGroup;
 			children = (
-				F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */,
+				F2B7A21B2576E8AB00224F8C /* JYHomeViewController.swift */,
 				F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */,
+				F2860A8A2577AC9200FC6668 /* JKDetailViewController.swift */,
 				F2D06514257735DD009AF680 /* JYTableViewCell.swift */,
 				F2D0652D25779739009AF680 /* TestProject.xcdatamodeld */,
 			);
@@ -352,12 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B7A21C2576E8AB00224F8C /* JYDetailViewController.swift in Sources */,
+				F2B7A21C2576E8AB00224F8C /* JYHomeViewController.swift in Sources */,
 				F2B7A21E2576E8C000224F8C /* JYHistoryViewController.swift in Sources */,
 				F2B7A1F02576637F00224F8C /* ViewController.swift in Sources */,
 				F2B7A1EC2576637F00224F8C /* AppDelegate.swift in Sources */,
 				F2B7A1EE2576637F00224F8C /* SceneDelegate.swift in Sources */,
 				F2D06515257735DD009AF680 /* JYTableViewCell.swift in Sources */,
+				F2860A8B2577AC9200FC6668 /* JKDetailViewController.swift in Sources */,
 				F2D0652F25779739009AF680 /* TestProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

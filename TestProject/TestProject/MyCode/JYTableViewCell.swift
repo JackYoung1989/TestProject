@@ -12,14 +12,14 @@ class JYTableViewCell: UITableViewCell {
 
     lazy var keyLabel : UILabel  = {
         let label = UILabel()
-        label.backgroundColor = UIColor.white
+        label.backgroundColor = UIColor.clear
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     lazy var valueLabel : UILabel  = {
         let label = UILabel()
-        label.backgroundColor = UIColor.white
+        label.backgroundColor = UIColor.clear
         label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
@@ -27,7 +27,6 @@ class JYTableViewCell: UITableViewCell {
     required override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.selectionStyle = .none
         self.contentView.addSubview(self.keyLabel)
         self.keyLabel.mas_remakeConstraints { (make) in
             make?.left.equalTo()(10)
