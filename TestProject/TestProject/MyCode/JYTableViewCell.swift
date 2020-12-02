@@ -12,23 +12,22 @@ class JYTableViewCell: UITableViewCell {
 
     lazy var keyLabel : UILabel  = {
         let label = UILabel()
-        label.text = "key"
-        label.backgroundColor = UIColor.yellow
+        label.backgroundColor = UIColor.white
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     lazy var valueLabel : UILabel  = {
         let label = UILabel()
-        label.text = "key"
-        label.backgroundColor = UIColor.yellow
+        label.backgroundColor = UIColor.white
         label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    required override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.selectionStyle = .none
         self.contentView.addSubview(self.keyLabel)
         self.keyLabel.mas_remakeConstraints { (make) in
             make?.left.equalTo()(10)
@@ -44,5 +43,18 @@ class JYTableViewCell: UITableViewCell {
             make?.right.equalTo()(-10)
             make?.height.equalTo()(20)
         }
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func fillCell(model : JKModel) {
+        self.keyLabel.text = "time is :"
+        self.valueLabel.text = model.time
     }
 }

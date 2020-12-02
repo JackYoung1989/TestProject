@@ -19,6 +19,8 @@
 		F2B7A21C2576E8AB00224F8C /* JYDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */; };
 		F2B7A21E2576E8C000224F8C /* JYHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */; };
 		F2D06515257735DD009AF680 /* JYTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D06514257735DD009AF680 /* JYTableViewCell.swift */; };
+		F2D0652C2577971A009AF680 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D0651925778D0C009AF680 /* CoreData.framework */; };
+		F2D0652F25779739009AF680 /* TestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2D0652D25779739009AF680 /* TestProject.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 		F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYHistoryViewController.swift; sourceTree = "<group>"; };
 		F2D06514257735DD009AF680 /* JYTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYTableViewCell.swift; sourceTree = "<group>"; };
 		F2D0651925778D0C009AF680 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F2D0652E25779739009AF680 /* TestProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestProject.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D0652C2577971A009AF680 /* CoreData.framework in Frameworks */,
 				EBE8ED0C737BE5E46D913CA9 /* Pods_TestProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +162,7 @@
 				F2B7A21B2576E8AB00224F8C /* JYDetailViewController.swift */,
 				F2B7A21D2576E8C000224F8C /* JYHistoryViewController.swift */,
 				F2D06514257735DD009AF680 /* JYTableViewCell.swift */,
+				F2D0652D25779739009AF680 /* TestProject.xcdatamodeld */,
 			);
 			path = MyCode;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				F2B7A1EC2576637F00224F8C /* AppDelegate.swift in Sources */,
 				F2B7A1EE2576637F00224F8C /* SceneDelegate.swift in Sources */,
 				F2D06515257735DD009AF680 /* JYTableViewCell.swift in Sources */,
+				F2D0652F25779739009AF680 /* TestProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +687,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F2D0652D25779739009AF680 /* TestProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2D0652E25779739009AF680 /* TestProject.xcdatamodel */,
+			);
+			currentVersion = F2D0652E25779739009AF680 /* TestProject.xcdatamodel */;
+			path = TestProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F2B7A1E02576637F00224F8C /* Project object */;
 }

@@ -58,10 +58,18 @@ class JYDetailViewController: UIViewController {
             make?.bottom.equalTo()(self.view.mas_bottom)?.offset()(-20)
             make?.top.equalTo()(self.view.mas_top)?.offset()(isIphoneX ? 88 : 64)
         }
+        
+        //if has history,show the last one
+        let modelsArray = self.getModelArray()
+        if modelsArray.count > 0 {
+            let model = modelsArray.last
+            self.contentTextView.text = model?.content
+        }
     }
     
     @objc func historyButtonTouched() {
         let historyViewController = JYHistoryViewController()
+        historyViewController.historyArray = self.getModelArray()
         self.navigationController?.pushViewController(historyViewController, animated: true)
     }
 
@@ -72,7 +80,6 @@ class JYDetailViewController: UIViewController {
         manager.get(baseUrl, parameters: nil, progress: { (progress) in
             
         }, success: { [weak self](task, responseData) in
-            print("\(responseData ?? "")")
             if let weakSelf = self {
                 let dic : [String:String] = responseData as? [String:String] ?? [String:String]()
                 var resultString = ""
@@ -81,6 +88,24 @@ class JYDetailViewController: UIViewController {
                 }
                 weakSelf.contentTextView.text = resultString
                 
+                //store web data
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context = appDelegate.persistentContainer.viewContext
+                 
+                let model = NSEntityDescription.insertNewObject(forEntityName: "JKModel",into: context) as! JKModel
+
+                let timeFormatter = DateFormatter()
+                timeFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+                let resultTime = timeFormatter.string(from: Date()) as String
+                
+                model.time = resultTime
+                model.content = resultString
+                do {
+                    try context.save()
+                    print("save sucessful")
+                } catch {
+                    fatalError("save failed：\(error)")
+                }
             }
             
         }) { (task, responseData) in
@@ -92,5 +117,33 @@ class JYDetailViewController: UIViewController {
             self.present(alert, animated: true) {
             }
         }
+    }
+    
+    func getModelArray() -> [JKModel] {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<JKModel>(entityName:"JKModel")
+        fetchRequest.fetchLimit = 10000 //amount to get
+        fetchRequest.fetchOffset = 0
+        
+        //set predicate
+        fetchRequest.predicate = nil
+        
+        //quiry the data
+        var fetchedObjects = [JKModel]()
+        do {
+            fetchedObjects = try context.fetch(fetchRequest)
+            
+            //print the result
+            for model in fetchedObjects{
+                print("🌟🌟🌟model=\(model.time ?? "")")
+                print("🌟🌟🌟content=\(model.content ?? "")")
+            }
+        }
+        catch {
+            fatalError("failed：\(error)")
+        }
+        return fetchedObjects
     }
 }

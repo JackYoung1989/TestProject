@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestProject/MyCode/JKModel+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:TestProject/MyCode/JKModel+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:TestProject.xcodeproj">
    </FileRef>
    <FileRef
