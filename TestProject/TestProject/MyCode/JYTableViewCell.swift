@@ -52,7 +52,7 @@ class JYTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func fillCell(model : JKModel) {
+    func fillCell(model : JYModel) {
         self.keyLabel.text = "time is :"
         self.valueLabel.text = model.time
     }

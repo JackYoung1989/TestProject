@@ -10,7 +10,7 @@ import UIKit
 
 class JYHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let kJYDetailViewControllerCellKey = "kJYDetailViewControllerCellKey"
-    var historyArray = [JKModel]()
+    var historyArray = [JYModel]()
     
     lazy var tableView : UITableView  = {
         let tableView = UITableView(frame: CGRect.zero, style: .plain)
@@ -63,7 +63,7 @@ class JYHistoryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if historyArray.count > indexPath.row {
-            let detailViewController = JKDetailViewController()
+            let detailViewController = JYDetailViewController()
             detailViewController.content = historyArray[indexPath.row].content
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }

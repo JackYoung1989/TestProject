@@ -92,7 +92,7 @@ class JYHomeViewController: UIViewController {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 let context = appDelegate.persistentContainer.viewContext
                  
-                let model = NSEntityDescription.insertNewObject(forEntityName: "JKModel",into: context) as! JKModel
+                let model = NSEntityDescription.insertNewObject(forEntityName: "JYModel",into: context) as! JYModel
 
                 let timeFormatter = DateFormatter()
                 timeFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
@@ -119,11 +119,11 @@ class JYHomeViewController: UIViewController {
         }
     }
     
-    func getModelArray() -> [JKModel] {
+    func getModelArray() -> [JYModel] {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
 
-        let fetchRequest = NSFetchRequest<JKModel>(entityName:"JKModel")
+        let fetchRequest = NSFetchRequest<JYModel>(entityName:"JYModel")
         fetchRequest.fetchLimit = 10000 //amount to get
         fetchRequest.fetchOffset = 0
         
@@ -131,7 +131,7 @@ class JYHomeViewController: UIViewController {
         fetchRequest.predicate = nil
         
         //quiry the data
-        var fetchedObjects = [JKModel]()
+        var fetchedObjects = [JYModel]()
         do {
             fetchedObjects = try context.fetch(fetchRequest)
         }

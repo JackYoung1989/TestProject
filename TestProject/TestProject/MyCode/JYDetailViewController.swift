@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JKDetailViewController: UIViewController {
+class JYDetailViewController: UIViewController {
 
     var content : String?
     lazy var contentTextView : UITextView  = {
